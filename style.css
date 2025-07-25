@@ -1,47 +1,47 @@
 /* Reset & Base Styles */
 
-{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Bree Serif', serif; }
 
 
-body.home-page { background: radial-gradient(ellipse at top, #0a0a2a, #000); color: #fff; min-height: 100vh; overflow-x: hidden; }
+body { background: #fff8f0; color: #3a1f0b; font-size: 16px; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
 
-/* Navbar */ .navbar { display: flex; justify-content: space-between; align-items: center; background: linear-gradient(to right, #0ff, #7f00ff); padding: 1rem 2rem; box-shadow: 0 0 15px #0ff; position: sticky; top: 0; z-index: 10; }
+header { background: linear-gradient(45deg, #ff6f3c, #ffb347); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
 
-.logo { font-size: 1.8rem; font-weight: bold; background: linear-gradient(45deg, #fff, #0ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.logo { font-size: 2rem; font-weight: bold; font-family: 'Bree Serif', serif; }
 
-.navbar nav a { margin: 0 1rem; color: #fff; text-decoration: none; font-weight: 500; transition: 0.3s; }
+nav a { color: white; text-decoration: none; margin-left: 1.5rem; font-weight: bold; transition: opacity 0.3s; }
 
-.navbar nav a:hover { color: #0ff; }
+nav a:hover { opacity: 0.8; }
 
-.nav-actions a { margin-left: 1rem; padding: 0.5rem 1rem; border-radius: 6px; background: #222; color: #0ff; text-decoration: none; transition: 0.3s; }
+.hero { background: url('images/hero-food.jpg') center/cover no-repeat; height: 70vh; display: flex; justify-content: center; align-items: center; text-align: center; color: white; padding: 1rem; }
 
-.nav-actions a:hover { background: #0ff; color: #000; }
+.hero h1 { font-size: 3rem; background: rgba(0, 0, 0, 0.5); padding: 1rem 2rem; border-radius: 12px; font-family: 'Bree Serif', serif; }
 
-/* Hero Section */ .hero { text-align: center; padding: 4rem 2rem; background: url('galaxy-bg.jpg') no-repeat center center/cover; position: relative; z-index: 1; }
+section { padding: 2rem; max-width: 1200px; margin: auto; }
 
-.hero::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: -1; }
+h2 { color: #c0392b; margin-bottom: 1rem; font-family: 'Bree Serif', serif; }
 
-.hero h1 { font-size: 3rem; background: linear-gradient(90deg, #0ff, #f0f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
 
-.hero p { font-size: 1.2rem; color: #ccc; margin-bottom: 2rem; }
+.menu-item { background: #fff2e6; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
 
-.hero .btn { padding: 0.75rem 1.5rem; background: linear-gradient(45deg, #0ff, #7f00ff); color: #000; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s; text-decoration: none; }
+.menu-item:hover { transform: scale(1.03); }
 
-.hero .btn:hover { transform: scale(1.1); box-shadow: 0 0 20px #0ff; }
+.menu-item img { width: 100%; height: 200px; object-fit: cover; }
 
-/* Featured Section */ .featured { padding: 3rem 2rem; background: #0a0a2a; text-align: center; }
+.menu-item .content { padding: 1rem; }
 
-.featured h2 { font-size: 2rem; color: #0ff; margin-bottom: 2rem; }
+.menu-item .content h3 { margin-bottom: 0.5rem; font-size: 1.2rem; color: #e67e22; }
 
-.dish-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+.menu-item .content p { font-size: 0.9rem; color: #5a3222; }
 
-.dish { background: #111; border: 1px solid #222; border-radius: 10px; overflow: hidden; box-shadow: 0 0 10px #0ff33f1a; transition: transform 0.3s; }
+.menu-item .price { margin-top: 0.5rem; color: #d35400; font-weight: bold; }
 
-.dish:hover { transform: translateY(-5px); box-shadow: 0 0 20px #0ff; }
+footer { background: #3e2723; color: #fff; padding: 2rem; text-align: center; margin-top: auto; font-size: 0.9rem; }
 
-.dish img { width: 100%; height: 180px; object-fit: cover; }
+@media (max-width: 768px) { header { flex-direction: column; align-items: flex-start; }
 
-.dish h3 { margin: 0.8rem; color: #fff; }
+nav { margin-top: 1rem; }
 
-.dish p { color: #aaa; margin: 0 0.8rem 1rem; font-size: 0.9rem; }
+.hero h1 { font-size: 2rem; } }
 
