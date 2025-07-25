@@ -60,7 +60,6 @@ body::before {
   background: linear-gradient(45deg, #00f0ff, #a020f0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: pulseText 2s infinite;
 }
 
 .login-box input {
