@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>connect feed - Log in</title>
-  <link rel="stylesheet" href="Loginpage.css"/>
+  <link rel="stylesheet" href="Loginpage.css" />
 </head>
 <body class="login-page">
   <div class="login-container">
@@ -12,12 +12,15 @@
     <div class="login-box">
       <input type="text" placeholder="Email or Phone" />
       <input type="password" placeholder="Password" />
-      <button onclick="location.href='home.html'">Log In</button>
+      <button id="loginBtn">Log In</button>
+      <p id="error-message"></p>
       <a href="#">Forgotten password?</a>
       <hr/>
       <button class="create-btn">Create New Account</button>
     </div>
     <p><a href="#">Create a Page</a> for a celebrity, brand or business.</p>
   </div>
+
+  <script src="login.js"></script>
 </body>
 </html>
