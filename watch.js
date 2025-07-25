@@ -1,24 +1,18 @@
-﻿<script>
-  function adjustReelInfoPosition() {
-    const reelInfo = document.querySelector('.reel-info');
-    const screenHeight = window.innerHeight;
+document.querySelectorAll('.menu-filters button').forEach(button => {
+  button.addEventListener('click', () => {
+    const category = button.getAttribute('data-category');
 
+    // Update active class
+    document.querySelectorAll('.menu-filters button').forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
 
-    // Safe zone above mobile nav buttons (like 80-120px)
-    let bottomOffset = 100;
-
-
-    // If screen height is very small (e.g. 500px phones), reduce bottom offset
-    if (screenHeight < 600) {
-      bottomOffset = 120;
-    }
-
-
-    reelInfo.style.bottom = bottomOffset + 'px';
-  }
-
-
-  // Call on page load and when screen resizes
-  window.addEventListener('load', adjustReelInfoPosition);
-  window.addEventListener('resize', adjustReelInfoPosition);
-</script>
+    // Show/hide items
+    document.querySelectorAll('.menu-item').forEach(item => {
+      if (category === 'all' || item.dataset.category === category) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
