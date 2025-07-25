@@ -62,15 +62,8 @@ body::before {
   -webkit-text-fill-color: transparent;
 }
 
-
-/* Grey wave element */
-.login-box input::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: .login-box input::after {
+/* Login boxes*/
+.login-box input::after {
   content: '';
   position: absolute;
   top: 0;
@@ -89,26 +82,8 @@ body::before {
 @keyframes waveAgain {
   0% { left: -100%; }
   100% { left: 100%; }
-}100%;
-  background: rgba(200, 200, 200, 0.2); /* Grey color */
-  z-index: 0;
-  pointer-events: none;
 }
 
-/* Animate on focus */
-.login-box input:focus::before {
-  animation: wave-slide 0.6s ease-out forwards;
-}
-
-/* Keyframes */
-@keyframes wave-slide {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 100%;
-  }
-}
 
 /* Buttons */
 .login-box button {
