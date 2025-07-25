@@ -6,45 +6,35 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* Full black background */
 body.login-page {
-  background: radial-gradient(ellipse at center, #0d0d2b 0%, #000 100%);
+  background: #000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
   overflow: hidden;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  color: white;
 }
 
-/* Night black background */
-body.login-page {
-  background: #000; /* full black */
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  color: white;
-}
-
-
+/* Optional: Disable stars animation */
 body::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  opacity: 0; /* invisible */
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
   z-index: 0;
 }
 
-/*  container */
+/* Fullscreen container */
 .login-container {
   background: #0a0a1a;
   padding: 2rem;
   border-radius: 0;
-  width: 100vw;    
-  height: 100vh;   
+  width: 100vw;
+  height: 100vh;
   z-index: 1;
   text-align: center;
   display: flex;
@@ -52,7 +42,7 @@ body::before {
   justify-content: center;
 }
 
-/* Logo */
+/* Logo text */
 .fb-logo {
   font-size: 2.5rem;
   font-weight: bold;
@@ -62,7 +52,22 @@ body::before {
   -webkit-text-fill-color: transparent;
 }
 
-/* Login boxes*/
+/* Login Inputs */
+.login-box input {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1b1b3a;
+  color: #fff;
+  box-shadow: inset 0 0 10px rgba(0,255,255,0.2);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Wave animation pseudo-element */
 .login-box input::after {
   content: '';
   position: absolute;
@@ -75,6 +80,7 @@ body::before {
   z-index: 2;
 }
 
+/* Triggered wave animation */
 .login-box input.wave-animate::after {
   animation: waveAgain 0.5s ease-out forwards;
 }
@@ -84,8 +90,7 @@ body::before {
   100% { left: 100%; }
 }
 
-
-/* Buttons */
+/* Login & Create buttons */
 .login-box button {
   width: 100%;
   padding: 12px;
@@ -123,14 +128,14 @@ body::before {
   text-decoration: underline;
 }
 
-/* HR Separator */
+/* Separator line */
 hr {
   border: none;
   border-top: 1px solid #444;
   margin: 20px 0;
 }
 
-/* Create Page Text */
+/* Footer text */
 .login-container > p {
   margin-top: 1.2rem;
   font-size: 0.9rem;
@@ -144,15 +149,4 @@ hr {
 
 .login-container > p a:hover {
   text-decoration: underline;
-}
-
-/* Animations */
-@keyframes moveStars {
-  from { background-position: 0 0; }
-  to { background-position: -10000px 5000px; }
-}
-
-@keyframes pulseText {
-  0%, 100% { text-shadow: 0 0 5px #0ff, 0 0 10px #7f00ff; }
-  50% { text-shadow: 0 0 15px #0ff, 0 0 30px #7f00ff; }
 }
