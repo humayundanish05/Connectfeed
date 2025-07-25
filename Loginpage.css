@@ -25,7 +25,7 @@ body::before {
   background: url('https://i.ibb.co/6Wx4vwn/stars-bg.png') repeat;
   opacity: 0.2;
   z-index: 0;
-  animation: moveStars 100s linear infinite;
+ 
 }
 
 /* Main Container */
@@ -33,7 +33,6 @@ body::before {
   background: rgba(15, 15, 40, 0.9);
   padding: 2.5rem;
   border-radius: 16px;
-  box-shadow: 0 0 20px #7f00ff, 0 0 40px #00c3ff;
   width: 320px;
   z-index: 1;
   text-align: center;
