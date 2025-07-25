@@ -17,24 +17,39 @@ body.login-page {
   color: white;
 }
 
-/* Star Field Background */
+/* Night black background */
+body.login-page {
+  background: #000; /* full black */
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+/* Star field disabled / removed animation */
 body::before {
   content: "";
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
-  opacity: 0.2;
+  opacity: 0; /* invisible */
   z-index: 0;
- 
 }
 
-/* Main Container */
+/* Full-screen edge-to-edge container */
 .login-container {
-  background: rgba(15, 15, 40, 0.9);
-  padding: 2.5rem;
-  border-radius: 20px;
-  width: 335px;
+  background: #0a0a1a;
+  padding: 2rem;
+  border-radius: 0;
+  width: 100vw;    
+  height: 100vh;   
   z-index: 1;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Logo */
