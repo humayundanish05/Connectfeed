@@ -62,8 +62,15 @@ body::before {
   -webkit-text-fill-color: transparent;
 }
 
-/* login boxes */
-.login-box input::after {
+
+/* Grey wave element */
+.login-box input::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: .login-box input::after {
   content: '';
   position: absolute;
   top: 0;
@@ -82,15 +89,7 @@ body::before {
 @keyframes waveAgain {
   0% { left: -100%; }
   100% { left: 100%; }
-}
-/* Grey wave element */
-.login-box input::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
+}100%;
   background: rgba(200, 200, 200, 0.2); /* Grey color */
   z-index: 0;
   pointer-events: none;
