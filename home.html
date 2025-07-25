@@ -3,61 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>connect feed - Home</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Galaxy Bites - Home</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="home-page">
-  <div class="navbar">
-    <div class="fb-logo">connect feed</div>
-    <input type="text" placeholder="Search connect feed" />
-    <div class="nav-icons">
-      <span>🏠</span>
-      <span>👥</span>
-      <span>💬</span>
-      <span>🔔</span>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">🍔 Galaxy Bites</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="order.html">Order</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="cart.html" class="cart-btn">🛒 Cart</a>
+      <a href="login.html" class="login-btn">Login</a>
     </div>
-  </div>
+  </header>
 
-  <div class="feed">
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Galaxy Bites</h1>
+    <p>Delicious food from across the galaxy, delivered to your doorstep!</p>
+    <a href="menu.html" class="btn">Explore Menu</a>
+  </section>
 
-    <!-- Create Post -->
-    <div class="post-box">
-      <input type="text" placeholder="What's on your mind?" />
-      <button>Post</button>
-    </div>
-
-    <!-- Post by John Doe -->
-    <div class="post">
-      <div class="user-info">
-        <img src="https://i.pravatar.cc/50?img=1" alt="John Doe" class="profile-pic" />
-        <h3>John Doe</h3>
+  <!-- Featured Dishes -->
+  <section class="featured">
+    <h2>Featured Dishes</h2>
+    <div class="dish-grid">
+      <div class="dish-card">
+        <img src="images/burger.jpg" alt="Burger Special">
+        <h3>Galactic Burger</h3>
+        <p>Loaded with cheese and cosmic spices!</p>
+        <a href="order.html" class="btn-sm">Order Now</a>
       </div>
-      <p>This is a fake post for learning purposes.</p>
-      <img src="https://picsum.photos/seed/john1/500/300" class="post-img" />
-      <img src="https://picsum.photos/seed/john2/500/300" class="post-img" />
-      <div class="actions">
-        <button>Like</button>
-        <button>Comment</button>
-        <button>Share</button>
+      <div class="dish-card">
+        <img src="images/pizza.jpg" alt="Pizza Special">
+        <h3>Rocket Pizza</h3>
+        <p>Thin crust with meteor pepperoni & cheese.</p>
+        <a href="order.html" class="btn-sm">Order Now</a>
       </div>
-    </div>
-
-    <!-- Post by Jane Smith -->
-    <div class="post">
-      <div class="user-info">
-        <img src="https://i.pravatar.cc/50?img=5" alt="Jane Smith" class="profile-pic" />
-        <h3>Jane Smith</h3>
-      </div>
-      <p>Welcome to Fakebook!</p>
-      <img src="https://picsum.photos/seed/jane1/500/300" class="post-img" />
-      <img src="https://picsum.photos/seed/jane2/500/300" class="post-img" />
-      <div class="actions">
-        <button>Like</button>
-        <button>Comment</button>
-        <button>Share</button>
+      <div class="dish-card">
+        <img src="images/shake.jpg" alt="Shake Special">
+        <h3>Alien Shake</h3>
+        <p>Mint chocolate & Martian marshmallows!</p>
+        <a href="order.html" class="btn-sm">Order Now</a>
       </div>
     </div>
+  </section>
 
-  </div>
+  <!-- Promo Banner -->
+  <section class="promo-banner">
+    <h2>🔥 Get 20% Off on Your First Order!</h2>
+    <a href="order.html" class="btn">Order Now</a>
+  </section>
+
+  <!-- About Preview -->
+  <section class="about-preview">
+    <h2>About Galaxy Bites</h2>
+    <p>We bring interstellar flavor to your plate. From fiery Mars bites to cool Neptune shakes, every meal is a taste adventure.</p>
+    <a href="about.html" class="btn-sm">Read More</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Galaxy Bites. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="contact.html">Contact</a> |
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+  </footer>
+
 </body>
 </html>
