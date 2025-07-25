@@ -1,132 +1,135 @@
-﻿/* Reset and base styles */
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-
 body.login-page {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f2f5;
+  background: radial-gradient(ellipse at center, #0d0d2b 0%, #000 100%);
+  overflow: hidden;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  flex-direction: column;
-  padding: 20px;
+  position: relative;
+  color: white;
 }
 
-
-/* Facebook logo */
-.fb-logo {
-  font-size: 48px;
-  color: #1877f2;
-  font-weight: bold;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin-bottom: 20px;
+/* Star Field Background */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: url('https://i.ibb.co/6Wx4vwn/stars-bg.png') repeat;
+  opacity: 0.2;
+  z-index: 0;
+  animation: moveStars 100s linear infinite;
 }
 
-
-/* Login box */
+/* Main Container */
 .login-container {
-  width: 100%;
-  max-width: 400px;
+  background: rgba(15, 15, 40, 0.9);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px #7f00ff, 0 0 40px #00c3ff;
+  width: 320px;
+  z-index: 1;
   text-align: center;
 }
 
-
-.login-box {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  margin-bottom: 15px;
+/* Logo */
+.fb-logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(45deg, #00f0ff, #a020f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulseText 2s infinite;
 }
 
-
-/* Inputs */
+/* Input Fields */
 .login-box input {
   width: 100%;
   padding: 12px;
-  margin: 8px 0;
-  border-radius: 6px;
-  border: 1px solid #dddfe2;
-  font-size: 16px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1b1b3a;
+  color: #fff;
+  box-shadow: inset 0 0 10px rgba(0,255,255,0.2);
 }
 
-
-/* Login button */
+/* Buttons */
 .login-box button {
   width: 100%;
-  background-color: #1877f2;
-  color: white;
   padding: 12px;
-  font-size: 16px;
+  background: linear-gradient(45deg, #0ff, #00f6ff);
   border: none;
-  border-radius: 6px;
-  cursor: pointer;
+  border-radius: 8px;
+  color: #000;
   font-weight: bold;
-  margin-top: 10px;
-  transition: background 0.3s ease;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.3s;
 }
-
 
 .login-box button:hover {
-  background-color: #145dbf;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00f0ff;
 }
 
+.create-btn {
+  background: linear-gradient(45deg, #ff00f0, #7f00ff);
+  color: white !important;
+}
 
-/* Forgot password */
+/* Links */
 .login-box a {
-  display: block;
-  margin: 12px 0;
-  font-size: 14px;
-  color: #1877f2;
+  display: inline-block;
+  margin-top: 8px;
+  color: #a0f0ff;
   text-decoration: none;
+  transition: 0.3s;
 }
-
 
 .login-box a:hover {
+  color: #fff;
   text-decoration: underline;
 }
 
-
-/* Horizontal line */
-.login-box hr {
-  margin: 20px 0;
+/* HR Separator */
+hr {
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #444;
+  margin: 20px 0;
 }
 
-
-/* Create new account button */
-.create-btn {
-  background-color: #42b72a;
-  margin-top: 0;
+/* Create Page Text */
+.login-container > p {
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
-
-.create-btn:hover {
-  background-color: #36a420;
-}
-
-
-/* Footer text */
-.login-container p {
-  font-size: 14px;
-  color: #1c1e21;
-  margin-top: 10px;
-}
-
-
-.login-container p a {
-  font-weight: bold;
+.login-container > p a {
+  color: #ff80ff;
   text-decoration: none;
-  color: #1c1e21;
 }
 
-
-.login-container p a:hover {
+.login-container > p a:hover {
   text-decoration: underline;
+}
+
+/* Animations */
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+@keyframes pulseText {
+  0%, 100% { text-shadow: 0 0 5px #0ff, 0 0 10px #7f00ff; }
+  50% { text-shadow: 0 0 15px #0ff, 0 0 30px #7f00ff; }
 }
